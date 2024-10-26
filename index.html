@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora Nutricional</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Calculadora Nutricional</h1>
+      <h2>Lic. Alma Rosa Arratia Briones</h2>
+      <form id="calculatorForm">
+        <div class="form-group">
+          <label>Género:</label>
+          <div class="radio-group">
+            <input type="radio" id="male" name="gender" value="male" checked />
+            <label for="male">Hombre</label>
+            <input type="radio" id="female" name="gender" value="female" />
+            <label for="female">Mujer</label>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="age">Edad:</label>
+          <input type="number" id="age" required />
+        </div>
+        <div class="form-group">
+          <label for="weight">Peso (kg):</label>
+          <input type="number" id="weight" step="0.1" required />
+        </div>
+        <div class="form-group">
+          <label for="height">Altura (cm):</label>
+          <input type="number" id="height" required />
+        </div>
+        <div class="form-group">
+          <label for="activity">Nivel de Actividad:</label>
+          <select id="activity" required>
+            <option value="sedentary">Sedentario</option>
+            <option value="light">Ligero</option>
+            <option value="moderate">Moderado</option>
+            <option value="active">Activo</option>
+            <option value="veryActive">Muy Activo</option>
+          </select>
+        </div>
+        <button type="submit">Calcular</button>
+      </form>
+      <div id="result" class="hidden">
+        <h3>Resultados:</h3>
+        <p>Mifflin-St Jeor: <span id="mifflin"></span> calorías/día</p>
+        <p>Harris-Benedict: <span id="harris"></span> calorías/día</p>
+      </div>
+    </div>
+    <footer>ARAB.2024</footer>
+    <script src="script.js"></script>
+  </body>
+</html>
